@@ -1,5 +1,5 @@
-# Alian Hakim
-# D11191010
+# Nama : Alian Hakim
+# NIM : D11191010
 # Pertemuan 6
 
 def nilai_akhir(nilai_uas,nilai_uts,nilai_tugas):
