@@ -1,10 +1,11 @@
 import cv2 as cv
 import numpy as np
 
-image = cv.imread('../assets/img/kucing-oren-barbar.jpg')
+image = cv.imread('../assets/kucing-oren-barbar.jpg',1)
 if image is None:
-    print('Could not open or find the image.')
+    print('Could not open or find the image: ')
     exit(0)
+
 try:
     bright = int(input('* Enter the brightness value [0-255]: '))
 except ValueError:
@@ -20,6 +21,7 @@ for y in range(image.shape[0]):
                 newVal = 255
             new_image[y, x, z] = newVal
 
-cv.imshow('Original image', image)
-cv.imshow('Brightness image', new_image)
-cv.waitKey(0)
+cv.imshow('Original Image', image)
+cv.imshow('Brightness Image', new_image)
+# Wait until user press some key
+cv.waitKey()
